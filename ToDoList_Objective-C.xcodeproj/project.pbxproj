@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2D82AD4C29E2F19100384FD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD4B29E2F19100384FD6 /* AppDelegate.m */; };
 		2D82AD4F29E2F19100384FD6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD4E29E2F19100384FD6 /* SceneDelegate.m */; };
-		2D82AD5229E2F19100384FD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD5129E2F19100384FD6 /* ViewController.m */; };
 		2D82AD5529E2F19100384FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D82AD5329E2F19100384FD6 /* Main.storyboard */; };
 		2D82AD5829E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD5629E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld */; };
 		2D82AD5A29E2F19200384FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D82AD5929E2F19200384FD6 /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		2D82AD6029E2F19200384FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD5F29E2F19200384FD6 /* main.m */; };
 		2D82AD6729E2F28800384FD6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2D82AD6629E2F28800384FD6 /* .gitignore */; };
 		2D82AD6B29E2F72800384FD6 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD6A29E2F72800384FD6 /* ToDoItem.m */; };
+		2D82AD6F29E2FFBA00384FD6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD6E29E2FFBA00384FD6 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,6 @@
 		2D82AD4B29E2F19100384FD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2D82AD4D29E2F19100384FD6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2D82AD4E29E2F19100384FD6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		2D82AD5029E2F19100384FD6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2D82AD5129E2F19100384FD6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2D82AD5429E2F19100384FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D82AD5729E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList_Objective_C.xcdatamodel; sourceTree = "<group>"; };
 		2D82AD5929E2F19200384FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +34,8 @@
 		2D82AD6629E2F28800384FD6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2D82AD6929E2F69E00384FD6 /* ToDoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
 		2D82AD6A29E2F72800384FD6 /* ToDoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
+		2D82AD6D29E2FFAE00384FD6 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		2D82AD6E29E2FFBA00384FD6 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +68,12 @@
 		2D82AD4929E2F19100384FD6 /* ToDoList_Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				2D82AD6C29E2FF8D00384FD6 /* TableViewController */,
 				2D82AD6829E2F67100384FD6 /* Model */,
 				2D82AD4A29E2F19100384FD6 /* AppDelegate.h */,
 				2D82AD4B29E2F19100384FD6 /* AppDelegate.m */,
 				2D82AD4D29E2F19100384FD6 /* SceneDelegate.h */,
 				2D82AD4E29E2F19100384FD6 /* SceneDelegate.m */,
-				2D82AD5029E2F19100384FD6 /* ViewController.h */,
-				2D82AD5129E2F19100384FD6 /* ViewController.m */,
 				2D82AD5329E2F19100384FD6 /* Main.storyboard */,
 				2D82AD5929E2F19200384FD6 /* Assets.xcassets */,
 				2D82AD5B29E2F19200384FD6 /* LaunchScreen.storyboard */,
@@ -93,6 +92,15 @@
 				2D82AD6A29E2F72800384FD6 /* ToDoItem.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2D82AD6C29E2FF8D00384FD6 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D82AD6D29E2FFAE00384FD6 /* TableViewController.h */,
+				2D82AD6E29E2FFBA00384FD6 /* TableViewController.m */,
+			);
+			path = TableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +176,9 @@
 			files = (
 				2D82AD6B29E2F72800384FD6 /* ToDoItem.m in Sources */,
 				2D82AD6029E2F19200384FD6 /* main.m in Sources */,
-				2D82AD5229E2F19100384FD6 /* ViewController.m in Sources */,
 				2D82AD5829E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld in Sources */,
 				2D82AD4C29E2F19100384FD6 /* AppDelegate.m in Sources */,
+				2D82AD6F29E2FFBA00384FD6 /* TableViewController.m in Sources */,
 				2D82AD4F29E2F19100384FD6 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
