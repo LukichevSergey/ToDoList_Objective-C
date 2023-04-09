@@ -16,6 +16,7 @@
 		2D82AD5D29E2F19200384FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D82AD5B29E2F19200384FD6 /* LaunchScreen.storyboard */; };
 		2D82AD6029E2F19200384FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD5F29E2F19200384FD6 /* main.m */; };
 		2D82AD6729E2F28800384FD6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2D82AD6629E2F28800384FD6 /* .gitignore */; };
+		2D82AD6B29E2F72800384FD6 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD6A29E2F72800384FD6 /* ToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		2D82AD5E29E2F19200384FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D82AD5F29E2F19200384FD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D82AD6629E2F28800384FD6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2D82AD6929E2F69E00384FD6 /* ToDoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		2D82AD6A29E2F72800384FD6 /* ToDoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 		2D82AD4929E2F19100384FD6 /* ToDoList_Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				2D82AD6829E2F67100384FD6 /* Model */,
 				2D82AD4A29E2F19100384FD6 /* AppDelegate.h */,
 				2D82AD4B29E2F19100384FD6 /* AppDelegate.m */,
 				2D82AD4D29E2F19100384FD6 /* SceneDelegate.h */,
@@ -80,6 +84,15 @@
 				2D82AD6629E2F28800384FD6 /* .gitignore */,
 			);
 			path = "ToDoList_Objective-C";
+			sourceTree = "<group>";
+		};
+		2D82AD6829E2F67100384FD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D82AD6929E2F69E00384FD6 /* ToDoItem.h */,
+				2D82AD6A29E2F72800384FD6 /* ToDoItem.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D82AD6B29E2F72800384FD6 /* ToDoItem.m in Sources */,
 				2D82AD6029E2F19200384FD6 /* main.m in Sources */,
 				2D82AD5229E2F19100384FD6 /* ViewController.m in Sources */,
 				2D82AD5829E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld in Sources */,
