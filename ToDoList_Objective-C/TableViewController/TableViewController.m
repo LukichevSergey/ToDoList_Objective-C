@@ -1,26 +1,28 @@
 //
-//  ViewController.m
+//  TableViewController.m
 //  ToDoList_Objective-C
 //
 //  Created by Сергей Лукичев on 09.04.2023.
 //
 
-#import "ViewController.h"
+#import "TableViewController.h"
 #import "ToDoItem.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView       *table;
 @property (strong, nonatomic) NSMutableArray    *data;
 
 @end
 
-@implementation ViewController
+@implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureTableView];
     [self configureData];
+    
+    [self setTitle: @"ToDoList"];
 }
 
 - (void)configureData {
