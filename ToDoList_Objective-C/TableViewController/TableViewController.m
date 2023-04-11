@@ -6,12 +6,14 @@
 //
 
 #import "TableViewController.h"
-#import "ToDoItem.h"
+#import "AppDelegate.h"
 
 @interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) UITableView       *table;
-@property (strong, nonatomic) NSMutableArray    *data;
+@property AppDelegate *appDelegate;
+@property NSManagedObjectContext *context;
+@property NSArray *itemsData;
+@property (strong, nonatomic) UITableView *table;
 
 @end
 
@@ -26,19 +28,26 @@
 }
 
 - (void)configureData {
-    self.data = [NSMutableArray array];
     
-    NSDate *notificationDate1 = [NSDate dateWithTimeIntervalSinceNow:3600]; // оповещение через час
-    NSString *text1 = @"Сделать домашнее задание";
-
-    ToDoItem *item1 = [[ToDoItem alloc] initWithText: text1 notificationDate: notificationDate1];
-    [_data addObject:item1];
-
-    NSDate *notificationDate2 = [NSDate dateWithTimeIntervalSinceNow:7200]; // оповещение через два часа
-    NSString *text2 = @"Пойти в магазин";
-
-    ToDoItem *item2 = [[ToDoItem alloc] initWithText: text2 notificationDate: notificationDate2];
-    [_data addObject:item2];
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    _context = _appDelegate.persistentContainer.viewContext;
+    
+//    NSManagedObject *item1 = [NSEntityDescription insertNewObjectForEntityForName: @"ToDoItem" inManagedObjectContext: _context];
+//    [item1 setValue: @"Купить продукты" forKey: @"text"];
+//    [item1 setValue: [NSDate dateWithTimeIntervalSinceNow: 7200] forKey: @"notificationDate"];
+//    [item1 setValue: [NSDate date] forKey: @"creationDate"];
+//    
+//    [_appDelegate saveContext];
+//    
+//    NSManagedObject *item2 = [NSEntityDescription insertNewObjectForEntityForName: @"ToDoItem" inManagedObjectContext: _context];
+//    [item2 setValue: @"Купить подарок" forKey: @"text"];
+//    [item2 setValue: [NSDate dateWithTimeIntervalSinceNow: 3600] forKey: @"notificationDate"];
+//    [item2 setValue: [NSDate date] forKey: @"creationDate"];
+//    
+//    [_appDelegate saveContext];
+    
+    NSFetchRequest *requestExamLocation = [NSFetchRequest fetchRequestWithEntityName:@"ToDoItem"];
+    _itemsData = [_context executeFetchRequest: requestExamLocation error: nil];
 }
 
 - (void)configureTableView {
@@ -55,17 +64,17 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
     }
-    cell.textLabel.text =  [[_data objectAtIndex: indexPath.row] text];
+    cell.textLabel.text =  [[_itemsData objectAtIndex: indexPath.row] text];
     
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _data.count;
+    return _itemsData.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"title of cell %@", [_data objectAtIndex: indexPath.row]);
+    NSLog(@"title of cell %@", [_itemsData objectAtIndex: indexPath.row]);
 }
 
 
