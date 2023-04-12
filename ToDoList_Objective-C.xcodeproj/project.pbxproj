@@ -16,6 +16,7 @@
 		2D82AD6029E2F19200384FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD5F29E2F19200384FD6 /* main.m */; };
 		2D82AD6729E2F28800384FD6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2D82AD6629E2F28800384FD6 /* .gitignore */; };
 		2D82AD6F29E2FFBA00384FD6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D82AD6E29E2FFBA00384FD6 /* TableViewController.m */; };
+		2DBDEEC129E5A10B00A4C5F1 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBDEEC029E5A10B00A4C5F1 /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		2D82AD6629E2F28800384FD6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2D82AD6D29E2FFAE00384FD6 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2D82AD6E29E2FFBA00384FD6 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		2DBDEEBF29E5A0F500A4C5F1 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		2DBDEEC029E5A10B00A4C5F1 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 		2D82AD4929E2F19100384FD6 /* ToDoList_Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				2DBDEEBE29E5A0D200A4C5F1 /* CoreData */,
 				2D82AD6C29E2FF8D00384FD6 /* TableViewController */,
 				2D82AD4A29E2F19100384FD6 /* AppDelegate.h */,
 				2D82AD4B29E2F19100384FD6 /* AppDelegate.m */,
@@ -75,7 +79,6 @@
 				2D82AD5B29E2F19200384FD6 /* LaunchScreen.storyboard */,
 				2D82AD5E29E2F19200384FD6 /* Info.plist */,
 				2D82AD5F29E2F19200384FD6 /* main.m */,
-				2D82AD5629E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld */,
 				2D82AD6629E2F28800384FD6 /* .gitignore */,
 			);
 			path = "ToDoList_Objective-C";
@@ -88,6 +91,16 @@
 				2D82AD6E29E2FFBA00384FD6 /* TableViewController.m */,
 			);
 			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		2DBDEEBE29E5A0D200A4C5F1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2DBDEEBF29E5A0F500A4C5F1 /* CoreDataManager.h */,
+				2DBDEEC029E5A10B00A4C5F1 /* CoreDataManager.m */,
+				2D82AD5629E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBDEEC129E5A10B00A4C5F1 /* CoreDataManager.m in Sources */,
 				2D82AD6029E2F19200384FD6 /* main.m in Sources */,
 				2D82AD5829E2F19100384FD6 /* ToDoList_Objective_C.xcdatamodeld in Sources */,
 				2D82AD4C29E2F19100384FD6 /* AppDelegate.m in Sources */,

@@ -6,13 +6,12 @@
 //
 
 #import "TableViewController.h"
-#import "AppDelegate.h"
+#import "CoreDataManager.h"
 
 @interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property AppDelegate *appDelegate;
-@property NSManagedObjectContext *context;
-@property NSArray *itemsData;
+@property (strong, nonatomic) CoreDataManager *dataManager;
+@property (strong, nonatomic) NSArray *itemsData;
 @property (strong, nonatomic) UITableView *table;
 
 @end
@@ -21,33 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureTableView];
     [self configureData];
+    [self configureTableView];
     
     [self setTitle: @"ToDoList"];
 }
 
 - (void)configureData {
-    
-    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    _context = _appDelegate.persistentContainer.viewContext;
-    
-//    NSManagedObject *item1 = [NSEntityDescription insertNewObjectForEntityForName: @"ToDoItem" inManagedObjectContext: _context];
-//    [item1 setValue: @"Купить продукты" forKey: @"text"];
-//    [item1 setValue: [NSDate dateWithTimeIntervalSinceNow: 7200] forKey: @"notificationDate"];
-//    [item1 setValue: [NSDate date] forKey: @"creationDate"];
-//    
-//    [_appDelegate saveContext];
-//    
-//    NSManagedObject *item2 = [NSEntityDescription insertNewObjectForEntityForName: @"ToDoItem" inManagedObjectContext: _context];
-//    [item2 setValue: @"Купить подарок" forKey: @"text"];
-//    [item2 setValue: [NSDate dateWithTimeIntervalSinceNow: 3600] forKey: @"notificationDate"];
-//    [item2 setValue: [NSDate date] forKey: @"creationDate"];
-//    
-//    [_appDelegate saveContext];
-    
-    NSFetchRequest *requestExamLocation = [NSFetchRequest fetchRequestWithEntityName:@"ToDoItem"];
-    _itemsData = [_context executeFetchRequest: requestExamLocation error: nil];
+    _dataManager = [[CoreDataManager alloc] init];
+    [_dataManager removeAllItems];
+    [_dataManager createStartedData];
+    _itemsData = [_dataManager fetchData];
 }
 
 - (void)configureTableView {
